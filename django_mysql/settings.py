@@ -11,13 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os.path
 from pathlib import Path
-import dj_database_url
-import django_on_heroku
 
-# Usando Postgres no Heroku
-DATABASES = {
-    'default': dj_database_url.config()
-}
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6f))^36(=y9$z%5mwmg!3!#3i&)(7xkj$+4$pyov+*&x_!f#!+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -84,7 +78,6 @@ WSGI_APPLICATION = 'django_mysql.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -95,7 +88,6 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-"""
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -144,7 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Configurações de e-mail:
 # Linha de baixo estou avisando o django que quero imprimir caso
 # as configurações restantes para envio de email estejam corretas.
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Configurações de email rodando na aplicação:
 """
@@ -154,5 +146,3 @@ EMAIL_PORT = 587
 EMAIL_USER_TSL = True
 EMAIL_HOST_PASSWORD = 'sua senha'
 """
-
-django_on_heroku.settings(locals())
