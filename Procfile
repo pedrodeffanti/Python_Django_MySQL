@@ -1,1 +1,1 @@
-web: gunicorn django-mysql-intermedio-pedro.wsg --log-file -
+web: gunicorn django_mysql_intermediario.wsg --log-file -
