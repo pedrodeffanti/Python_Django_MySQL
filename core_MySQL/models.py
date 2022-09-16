@@ -1,5 +1,5 @@
 from django.db import models
-from stdimage.models import StdImageField
+from stdimage import StdImageField
 
 # SIGNALS
 from django.db.models import signals
