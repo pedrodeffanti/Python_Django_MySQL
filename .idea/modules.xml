@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/django_mysql_intermediario.iml" filepath="$PROJECT_DIR$/.idea/django_mysql_intermediario.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/django-mysql-intermediario.iml" filepath="$PROJECT_DIR$/.idea/django-mysql-intermediario.iml" />
     </modules>
   </component>
 </project>
