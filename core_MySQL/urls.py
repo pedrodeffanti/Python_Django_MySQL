@@ -8,9 +8,3 @@ urlpatterns = [
     path('produto/', produto, name='produto'),
 ]
 
-favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
-
-urlpatterns = [
-    path(r'^favicon\.ico$', favicon_view),
-
-]
